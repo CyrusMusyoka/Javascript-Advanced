@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Document Object Model</title>
+    </head>
+    <body>
+        <button>Hello!</button>
+        <button class="js-button">Second Button</button>
+    </body>
+    <script>
+        let h = document.querySelector('button');
+        console.log(h);
+
+        console.log(document.querySelector('button').innerHTML);
+        console.log(document.querySelector('.js-button')
+            .innerHTML);
+        
+        document.querySelector('.js-button').innerHTML = 'New Button';
+
+        console.log(document.querySelector('.js-button').innerHTML);
+
+
+        
+    </script>
+</html>
