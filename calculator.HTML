@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>calculator</title>
+</head>
+<body>
+    <p><button
+    onclick="
+        calculation +='1';
+        console.log(calculation);
+    ">1</button>
+
+    <button onclick="
+        calculation +='2';
+        console.log(calculation);
+    ">2</button>
+
+    <button onclick="
+        calculation +='3';
+        console.log(calculation);
+    ">3</button>
+    </p>
+
+    <p>
+    <button
+     onclick="
+        calculation += ' + ';
+        console.log(calculation);
+    ">+</button>
+
+    
+        <button title="calculation" onclick="calculation = eval(calculation);
+      console.log(calculation);">=</button>
+    </p>
+    
+</body>
+<script>
+    let calculation = '';
+</script>
+</html>
