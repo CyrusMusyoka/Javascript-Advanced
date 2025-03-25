@@ -7,6 +7,63 @@
         <p> YouTube Subscribe Button</p>
         <button
         onclick="
+        subscribe();
+        "
+        class="js-subscribe-button">
+        Subscribe</button>
+
+        <!--
+        "const buttonElement = document.querySelector('.js-subscribe-button');
+        console.log(buttonElement);
+        console.log(buttonElement.innerHTML);
+
+        if( buttonElement.innerHTML=== 'Subscribe'){
+        buttonElement.innerHTML = 'Subscribed'
+        }
+        else{
+        buttonElement.innerHTML = 'Subscribe'
+        };
+        "-->
+        <p>Amazon Shipping calculator</p>
+        <p>Orders under $40 = +$10 shipping.</p>
+        <p>Orders over $40 = FREE shipping.</p>
+        <input placeholder="Cost of Order" class="js-cost-input">
+        <button 
+        onclick="
+        calculateTotal();
+
+        ">Calculate</button>
+        <p class="js-total-cost"></p>
+    
+
+
+    </body>
+
+
+    <script>
+        function calculateTotal(){
+            const inputElement = document.querySelector('.js-cost-input');
+            //console.log(document.querySelector('.js-cost-input')); get the properties of the input element
+            let cost = Number(inputElement.value);
+
+            if(cost<40){
+                cost = cost+10;
+                console.log(cost);
+            }
+            //else{
+                //cost = cost;
+                //console.log(cost);
+            //}
+
+            console.log(inputElement.value);  // gives the output for the input placeholder value
+            
+
+            document.querySelector('.js-total-cost').innerHTML = `Total cost: $ ${cost}`;
+        }
+
+
+       function subscribe(){
+
         const buttonElement = document.querySelector('.js-subscribe-button');
         //console.log(buttonElement);
         console.log(buttonElement.innerHTML);
@@ -16,14 +73,8 @@
         }
         else{
         buttonElement.innerHTML = 'Subscribe'
-        };
-        "
-        class="js-subscribe-button">
-        Subscribe</button>
-    </body>
-
-    <script>
-       
+        }
+       };
         
     </script>
 </html>
