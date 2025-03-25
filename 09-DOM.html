@@ -5,6 +5,7 @@
     <body>
         <button>Hello!</button>
         <button class="js-button">Second Button</button>
+        <button class="new-button">Third Button</button>
     </body>
     <script>
         let h = document.querySelector('button');
@@ -16,8 +17,15 @@
             .innerHTML);
         
         document.querySelector('.js-button').innerHTML = 'New Button';
-
         console.log(document.querySelector('.js-button').innerHTML);
+
+        const j= document.querySelector('.new-button');
+        console.log(j); // the button property with it's attribute
+        console.log(j.innerHTML); // the button property with it's attribute
+
+        console.log(j.innerHTML = 'new-label');
+
+
 
 
         
