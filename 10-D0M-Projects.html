@@ -1,15 +1,59 @@
 <html>
     <head>
         <title>Document Object Model Projects</title>
+        <style>
+            body{
+                font-family: Arial;
+            }
+
+
+            .subscribe-button {
+                border: none;
+                background-color: black;
+                color: white;
+                font-weight: 700;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-right: 15px;
+                padding-left: 15px;
+                border-radius: 50px;
+                cursor: pointer;
+                margin-bottom: 25px;
+            }
+
+            .is-subscribed {
+                background-color:rgb(240, 240, 240);
+                color: black;
+            }
+
+            .cost-input {
+                font-size: 15px;
+                padding-bottom: 10px;
+                padding-top: 10px;
+                padding-right: 10px;
+                padding-left: 10px;
+                padding: 10px;
+            }
+
+            .calculateTotal {
+                font-size: 15px;
+                background-color: green;
+                padding: 10;
+                border: none;
+                cursor: pointer;
+            }
+
+
+        </style>
     </head>
 
     <body>
-        <p> YouTube Subscribe Button</p>
+        <p style="margin-top: 10px;"> YouTube Subscribe Button</p>
         <button
         onclick="
         subscribe();
         "
-        class="js-subscribe-button">
+        class="js-subscribe-button subscribe-button">
         Subscribe</button>
 
         <!--
@@ -27,7 +71,7 @@
         <p>Amazon Shipping calculator</p>
         <p>Orders under $40 = +$10 shipping.</p>
         <p>Orders over $40 = FREE shipping.</p>
-        <input placeholder="Cost of Order" class="js-cost-input" 
+        <input placeholder="Cost of Order" class="cost-input js-cost-input" 
         onkeydown="
         handlecostKeydown(event);
         
@@ -35,15 +79,13 @@
         <button 
         onclick="
         calculateTotal();
-
-        ">Calculate</button>
+        "
+        class="calculateTotal"
+        >Calculate</button>
         <p class="js-total-cost"></p>
     
-
-
+ 
     </body>
-
-
     <script>
         function handlecostKeydown(event){
             console.log(event.key); // display which key was pressed on keyboard.....Enter
@@ -83,11 +125,13 @@
 
         if( buttonElement.innerHTML=== 'Subscribe'){
         buttonElement.innerHTML = 'Subscribed'
+        buttonElement.classList.add('is-subscribed');
         }
         else{
-        buttonElement.innerHTML = 'Subscribe'
+        buttonElement.innerHTML = 'Subscribe';
+        buttonElement.classList.remove('is-subscribed');
         }
        };
         
-    </script>
+     </script>
 </html>
