@@ -30,7 +30,7 @@ body{
 }
 
 .delete-todo-button{
-    background-color: red;
+    background-color: darkred;
     color: white;
     border: none;
     font-size: 15px;

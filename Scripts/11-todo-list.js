@@ -11,34 +11,42 @@ const todoList = [{
 
 //console.log(`<p>hello people of kenya</p>`);
 
+let todoListHTML = ' ';
+
+// const rendertodoList = () => { };
+
 function rendertodoList(){
-            let todoListHTML = '';
+  let todoListHTML = '';
 
-            for(let i = 0; i<todoList.length; i++)
-            {
-            const todoObject = todoList[i];
-           // const name = todoObject.name; name taking property from todoObje
-           // const dueDate = todoObject.dueDate;
-            const {name, dueDate} = todoObject;
-           // todoListHTML += `<p>${name} - ${dueDate}</p>`;
-            const html = `
-            <div>${name}</div>
-            <div>${dueDate}</div>            
-            <button onclick="
-            todoList.splice(${i}, 1);
-            rendertodoList();
-            "
-            class = "delete-todo-button"
-            >Delete</button>
-            </p>
-            `;
-            todoListHTML +=html;
-            }
-            //console.log(todoListHTML);
+  todoList.forEach((todoObject, index)=>
+  {
+      //const todoObject = todoList[index];
+      const {name, dueDate} = todoObject;
+      const html = `
+      <div>${name}</div>
+      <div>${dueDate}</div>            
+      <button class = "delete-todo-button js-delete-todo-button">Delete</button>
+      `;
+      todoListHTML += html;
+      });
 
-            document.querySelector('.js-todo-list').
-              innerHTML = todoListHTML;
-        }
+  document.querySelector('.js-todo-list').
+    innerHTML = todoListHTML;
+
+  document.querySelectorAll('.js-delete-todo-button')
+  .forEach((deleteButton, index)=>{
+    deleteButton.addEventListener('click', ()=>{
+      todoList.splice(index, 1);
+      rendertodoList();
+    })
+  })
+  }
+
+
+document.querySelector('.js-add-todo-button')
+.addEventListener('click', ()=>{
+  addTodo();
+})
 
 
 function addTodo(){
@@ -147,4 +155,37 @@ function renderTodoList() {
 
   document.querySelector('.js-todo-list').innerHTML = todoListHTML;
 }
+
+
+
+
+function rendertodoList(){
+         /*   let todoListHTML = '';
+
+            for(let i = 0; i<todoList.length; i++)
+            {
+            const todoObject = todoList[i];
+           // const name = todoObject.name; name taking property from todoObje
+           // const dueDate = todoObject.dueDate;
+            const {name, dueDate} = todoObject;
+           // todoListHTML += `<p>${name} - ${dueDate}</p>`;
+            const html = `
+            <div>${name}</div>
+            <div>${dueDate}</div>            
+            <button onclick="
+            todoList.splice(${i}, 1);
+            rendertodoList();
+            "
+            class = "delete-todo-button"
+            >Delete</button>
+            </p>
+            `;
+            todoListHTML +=html;
+            }
+            //console.log(todoListHTML);
+
+            document.querySelector('.js-todo-list').
+              innerHTML = todoListHTML;
+        }
+
 */
