@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Store and retrieve data from local storage.</h2>
+<p>localStorage.setItem("lastname", "Smith");<br>
+localStorage.getItem("lastname");</p>
+<p>localStorage.setItem(key, value);</p>
+<p>localStorage.getItem(key);</p>
+<p>Read Data from Local Storage
+let lastname = localStorage.getItem(key);
+Remove Data from Local Storage
+localStorage.removeItem(key);
+Remove All (Clear Local Storage)
+localStorage.clear();
+</p>
+<p>IN LOCAL STORAGE, data is stored as string JSON file: JSON is a format for storing and transporting data.
+
+JSON is text, and text can be transported anywhere, and read by any programming language.
+
+JavaScript Objects can be converted into JSON for storage, and JSON can be converted back into JavaScript Objects.
+
+This way we can work with the data as JavaScript objects, with no complicated parsing or translations.</p>
+
+<p>JSON Methods
+Method	Description
+parse()	Parses a JSON string and returns a JavaScript object
+stringify()	Convert a JavaScript object to a JSON string
+Valid Data Types
+In JSON, values must be one of the following data types:
+
+a string
+a number
+an object (containing valid JSON values)
+an array
+a boolean
+null
+JSON values cannot be one of the following data types:
+
+a function
+a date
+undefined</p>
+<p id="demo"></p>
+
+<script>
+// Storing data:
+const myObj = { name: "John", age: 31, city: "New York" };
+const myJSON = JSON.stringify(myObj);
+localStorage.setItem("testJSON", myJSON);
+
+// Retrieving data:
+let text = localStorage.getItem("testJSON");
+let obj = JSON.parse(text);
+console.log(obj);
+console.log(myJSON);
+console.log(typeof myJSON , typeof text, typeof obj);
+document.getElementById("demo").innerHTML = obj.name;
+</script>
+
+</body>
+</html>

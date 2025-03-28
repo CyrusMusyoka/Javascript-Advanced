@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<head>
+    <title>Lesson 8- objects Eercises</title>
+</head>
+<body>
+    <p>Lesson 8- objects Eercises</p>
+</body>
+<script>
+
+    /*
+    const product = {
+        name: 'basketball',
+        price: 2095
+    };
+    console.log(product);
+
+    product.price = 2095+500; // product.price += 500;
+    console.log(product);
+
+    product['delivery-time'] = '3 Days'; // adding new products/ property-value in the object
+    console.log(product);
+
+    product['sales'] = 3000;
+    console.log(product);
+    */
+
+
+    //takes two objets and compares them by the property value price to determine the less expensive of the products
+
+    /*
+    const product1 = {
+        name: 'basketball',
+        price: 2095
+    };
+
+    const product2 = {
+        name: 'football',
+        price: 3000
+    };
+
+    console.log(product1);
+    console.log(product2);
+
+    function comparePrice(product1, product2){
+        if(product1.price < product2.price){
+            return product1; 
+        }
+        else{
+            return product2;
+        };    
+    }
+    console.log(comparePrice(product1, product2));
+    */
+    const product1 = {
+        name: 'basketball',
+        price: 3000
+    };
+
+    const product2 = {
+        name: 'basketball',
+        price: 3000
+    };
+
+    /*
+    // Here is an alternative solution that uses less code.
+      function isSameProduct(product1, product2) {
+        return (
+          product1.name === product2.name &&
+          product1.price === product2.price
+        );
+      }
+    */ 
+
+    function isSameProduct(product1, product2){
+        if(
+            product1.name === product2.name &&
+            product1.price === product2.price
+            ){
+            return true;
+        }
+        else{
+            return false;
+        }   
+    };
+    console.log(isSameProduct(product1, product2));
+
+    let hello = "Good Morning";
+    console.log(hello.toLowerCase());
+
+    console.log('good evening'.toUpperCase());
+    console.log('hello'.repeat(2));  // repeat a string many times u want
+    console.log('test '.repeat(3));  // 3times
+</script>
+</html>

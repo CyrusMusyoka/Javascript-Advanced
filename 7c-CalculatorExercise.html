@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <title>function exercise</title>
+    </head>
+    <body>
+        <p>
+            <button
+            onclick=
+            "
+            letCalculate('1');
+            "
+            >1</button>
+            <button
+            onclick=
+            "
+            letCalculate('2');
+            "
+            >2</button>
+            <button
+            onclick=
+            "
+            letCalculate('3');
+            "
+            >3</button>
+            <button
+            onclick=
+            "
+            letCalculate(`+`);
+            "
+            >+</button>
+        </p>
+        <p>
+           <button
+            onclick=
+            "
+            letCalculate('4');
+            "
+            >4</button>
+            <button
+            onclick=
+            "
+            letCalculate('5');
+            "
+            >5</button>
+            <button
+            onclick=
+            "
+            letCalculate('6');
+            "
+            >6</button>
+            <button
+            onclick=
+            "
+            letCalculate('-');
+            "
+            >-</button>
+        </p>
+        <p>
+            <button
+            onclick=
+            "
+            letCalculate('7');
+            "
+            >7</button>
+            <button
+            onclick=
+            "
+            letCalculate('8');
+            "
+            >8</button>
+            <button
+            onclick=
+            "
+            letCalculate('9');
+            "
+            >9</button>
+            <button
+            onclick=
+            "
+            letCalculate('*');
+            "
+            >*</button>
+        </p>
+        <p>
+            <button
+            onclick=
+            "
+            letCalculate('0');
+            "
+            >0</button>
+            <button
+            onclick=
+            "
+            letCalculate(`.`);
+            "
+            >.</button>
+            <button
+            onclick=
+            "
+            calculateTodo();
+            "
+            >=</button>
+
+            <button
+            onclick=
+            "
+            letCalculate('/');
+            "
+            >/</button>
+        </p>
+        <button
+        onclick="
+        clearButton();
+        ">CLEAR</button>
+    </body>
+    <script>
+
+        let calculation = localStorage.getItem('calculation') || '';
+
+        //localStorage.setItem('calculation', calculation);
+
+        function letCalculate(value){
+            calculation += value;
+            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+        };
+
+        function clearButton(){
+            calculation = '';
+            console.log(calculation);
+            localStorage.setItem('calculation', calculation);
+        }
+
+        //let totalResults = ' ';
+        function calculateTodo(){
+            totalResults = eval(calculation);
+            console.log(totalResults);
+            calculation = ' ';
+            localStorage.setItem('calculation', calculation);
+        };
+
+    </script>
+</html>
