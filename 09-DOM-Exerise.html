@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>Document Object Model Exerises</title>
+    </head>
+
+    <body>
+        <button>9a</button>
+        <button class="js-button">9b</button>
+    </body>
+    <script>
+        console.log(document.querySelector('button'));
+
+        const content = document.querySelector('button');
+        console.log(content.innerHTML);
+        
+
+
+        const buttonElement = document.querySelector('.js-button');
+        console.log(buttonElement);
+        console.log(buttonElement.innerHTML);
+        buttonElement.innerHTML = '9b done';
+        console.log(buttonElement.innerHTML);
+
+    </script>
+</html>

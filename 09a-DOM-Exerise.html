@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <title>Document Object Model Exerises 9c</title>
+    </head>
+
+    <body>
+        <button
+        onclick="
+        buttonClick()
+        "
+        class="js-headButton">heads</button>
+
+        <button 
+        onclick="
+        tailClick()
+        "
+        class="js-button">tails</button>
+
+        <p class="js-paragraph"></p>
+    </body>
+    <script>
+        function buttonClick(){
+            const headButton = document.querySelector('.js-paragraph');
+            console.log(headButton);
+            headButton.innerHTML = "You chose: heads";
+            console.log(headButton);  
+        }
+
+        function tailClick(){
+            const headButton = document.querySelector('.js-paragraph');
+            console.log(headButton);
+            headButton.innerHTML = "You chose: tailss";
+            console.log(headButton);
+        };
+
+    </script>
+</html>

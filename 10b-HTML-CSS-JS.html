@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <title>Document Object Model Exerises 9d</title>
+        <style>
+            .gamingButton,
+            .newButtons {
+                background-color: rgb(230, 230, 230);
+                color: black;
+                padding: 12px 20px;
+                border: none;
+                font-weight: bold;
+                font-family: Arial;
+                border-radius: 12px;
+                cursor: pointer; 
+                margin-right: 10px;       
+            }
+            .is-toggled {
+                background-color: black;
+                color: black;
+                cursor: pointer;
+            }
+          /* .newButtons {
+                background-color: black;
+                color: white;
+                padding: 12px 20px;
+                border: none;
+                font-weight: bold;
+                font-family: Arial;
+                border-radius: 12px;
+                cursor: pointer; 
+                margin-right: 10px;               
+            */
+        </style>
+    </head>
+
+    <body>
+        <p>
+            <button
+            onclick="
+            const button = document.querySelector('.js-button');
+            if(button.classList.contains('is-toggled')=== false ) 
+            {
+            button.classList.add('is-toggled');
+            }
+            else
+            {
+            button.classList.remove('is-toggled');
+            };  
+
+            "
+             class="js-button gamingButton">Gaming</button>
+
+             <button
+             onclick="
+                const button = document.querySelector('.js-button1');
+                if(button.classList.contains('is-toggled')=== false ) 
+                {
+                button.classList.add('is-toggled');
+                }else
+                {
+                button.classList.remove('is-toggled');
+                } ;  
+
+                "
+             class="js-button1 newButtons ">Music</button>
+
+             <button
+             onclick="
+                const button = document.querySelector('.js-button2');
+                if(button.classList.contains('is-toggled')===false) 
+                {
+                button.classList.add('is-toggled');
+                console.log(button.classList.contains('is-toggled'));
+                }
+                else 
+                {
+                button.classList.remove('is-toggled');
+                console.log(button.classList.contains('is-toggled'));
+                } ;  
+
+                "
+             class="js-button2 newButtons">Tech</button>
+        </p>
+    </body> 
+    <script>  
+    </script>
+</html>
